@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>商品列表</title>
+<title>商品詳情</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">  <script type="module" crossorigin src="/web-layout-training-vite/assets/main-DlcCq1M-.js"></script>
@@ -24,108 +24,137 @@
     </div>
 </div>
      <!-- 主內容區 -->
-    <div class="main index-main container">
+    <div class="main product-details-main container">
 
-        <!-- 麵包屑 -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item label-md"><a href="#">首頁</a></li>
-                <li class="breadcrumb-item active label-md" aria-current="page">所有商品</li>
-            </ol>
-        </nav>
-        
-        <h3>所有商品</h3>
+        <!-- 左側商品照8張 -->
+         <div class="product-images-grid">
+            <img src="/web-layout-training-vite/assets/Main%20image-C64rkm39.png" alt="product-images">
+            <img src="/web-layout-training-vite/assets/Main%20image-1-CYNRG6yi.png" alt="product-images">
+            <img src="/web-layout-training-vite/assets/Main%20image-2-DkA0PWNz.png" alt="product-images">
+            <img src="/web-layout-training-vite/assets/Main%20image-3-BQmIzW5B.png" alt="product-images">
+            <img src="/web-layout-training-vite/assets/Main%20image-4-MLLuQZNF.png" alt="product-images">
+            <img src="/web-layout-training-vite/assets/Main%20image-5-CWSu5-v7.png" alt="product-images">
+            <img src="/web-layout-training-vite/assets/Main%20image-6-Cx7pGO7X.png" alt="product-images">
+            <img src="/web-layout-training-vite/assets/Main%20image-7-CDE3GD7g.png" alt="product-images">
+         </div>
 
-        <!-- 菜單與商品區 -->
-        <div class="product-section">
+         <!-- 右側商品詳情 -->
+         <div class="product-info">
+            
+            <!-- 文字價格與介紹 -->
+            <div class="product-intro">
+                <!-- 麵包屑 -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item label-md"><a href="#">首頁</a></li>
+                        <li class="breadcrumb-item label-md"><a href="#">女鞋</a></li>
+                        <li class="breadcrumb-item label-md"><a href="#">滑板鞋</a></li>
+                        <li class="breadcrumb-item active label-md" aria-current="page">Platform 404</li>
+                    </ol>
+                </nav>
+                <h2>Platform 404</h2>
 
-            <!-- 菜單 -->
-            <div class="menu">
-                <ul>
-                    <li class="active"><a href="#" class="label-md">所有商品</a></li>
-                    <li><a href="#" class="label-md">慢跑鞋</a></li>
-                    <li><a href="#" class="label-md">滑板鞋</a></li>
-                    <li><a href="#" class="label-md">厚底鞋</a></li>
-                    <li><a href="#" class="label-md">限定 / 聯名企劃</a></li>
-                </ul>
+                <!-- 價格 -->
+                <div class="price">
+                    <h5>NT$2,600</h5>
+                    <p class="paragraph-sm">NT$3,200</p>
+                </div>
+
+                <p>Platform 404 以柔和奶白為底，搭配深藍色皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。</p>
+                <p>鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。</p>
+            </div>
+            
+            <!-- 顏色尺寸與按鈕 -->
+            <div class="spec-cta">
+                <!-- 顏色 -->
+                 <div class="color">
+                    <p class="paragraph-md">顏色</p>
+                    <div class="btn-wrapper">
+                        <button class="option option--img">
+                            <img src="/web-layout-training-vite/assets/Product-Card-BYZYi8Gj.png" alt="藍色">
+                            <span>藍色</span>
+                        </button>
+                        <button class="option option--img">
+                            <img src="/web-layout-training-vite/assets/Product-Card-1-Dn442d00.png" alt="卡其色">
+                            <span>卡其色</span>
+                        </button>
+                    </div>
+                 </div>
+                 <!-- 尺寸 -->
+                  <div class="size">
+                    <p class="paragraph-md">尺寸</p>
+                    <div class="option-grid">
+                        <button class="option selected">35(22.5cm)</button>
+                        <button class="option">36(23.0cm)</button>
+                        <button class="option">37(23.5cm)</button>
+                        <button class="option">38(24.0cm)</button>
+                        <button class="option">39(24.5cm)</button>
+                        <button class="option">40(25.0cm)</button>
+                        <button class="option">41(26.0cm)</button>
+                        <button class="option" disabled>42(26.5cm)</button>
+                        <button class="option" disabled>43(27.0cm)</button>
+                    </div>
+                    <p class="paragraph-sm">僅剩3雙</p>
+                  </div>
+                <!-- 收藏與試穿按鈕 -->
+                  <div class="btn-wrapper">
+                    <button class="btn btn-neutral-outlined"><img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.99987%203.43506L9.10362%202.51381C6.99987%200.351311%203.14237%201.09756%201.74987%203.81631C1.09612%205.09506%200.948619%206.94131%202.14237%209.29756C3.29237%2011.5663%205.68487%2014.2838%209.99987%2017.2438C14.3149%2014.2838%2016.7061%2011.5663%2017.8574%209.29756C19.0511%206.94006%2018.9049%205.09506%2018.2499%203.81631C16.8574%201.09756%2012.9999%200.350061%2010.8961%202.51256L9.99987%203.43506ZM9.99987%2018.7501C-9.16638%206.08506%204.09862%20-3.79994%209.77987%201.42881C9.85487%201.49756%209.92862%201.56881%209.99987%201.64256C10.0704%201.56888%2010.1438%201.49799%2010.2199%201.43006C15.8999%20-3.80244%2029.1661%206.08381%209.99987%2018.7501Z'%20fill='%23212529'/%3e%3c/svg%3e" alt="">加入收藏</button>
+                    <button class="btn btn-neutral-filled"><img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.0002%201.25C10.6633%201.25%2011.2992%201.51339%2011.768%201.98223C12.2368%202.45107%2012.5002%203.08696%2012.5002%203.75V6.25H7.50023V3.75C7.50023%203.08696%207.76363%202.45107%208.23247%201.98223C8.70131%201.51339%209.33719%201.25%2010.0002%201.25V1.25ZM13.7502%206.25V3.75C13.7502%202.75544%2013.3551%201.80161%2012.6519%201.09835C11.9486%200.395088%2010.9948%200%2010.0002%200C9.00567%200%208.05185%200.395088%207.34858%201.09835C6.64532%201.80161%206.25023%202.75544%206.25023%203.75V6.25H4.20023C3.75133%206.2501%203.31735%206.41125%202.97718%206.70417C2.63701%206.99709%202.41322%207.40233%202.34648%207.84625L1.06274%2016.4125C0.99622%2016.857%201.02636%2017.3106%201.1511%2017.7423C1.27584%2018.1741%201.49224%2018.5739%201.78554%2018.9144C2.07885%2019.255%202.44215%2019.5282%202.85067%2019.7155C3.25919%2019.9029%203.70331%2019.9999%204.15273%2020H15.8465C16.296%2020.0001%2016.7403%2019.9032%2017.149%2019.7159C17.5576%2019.5287%2017.9211%2019.2554%2018.2145%2018.9149C18.508%2018.5744%2018.7245%2018.1745%2018.8493%2017.7426C18.9741%2017.3108%2019.0043%2016.8571%2018.9377%2016.4125L17.6527%207.84625C17.586%207.40254%2017.3624%206.99747%2017.0225%206.70458C16.6826%206.41169%2016.2489%206.2504%2015.8002%206.25H13.7502ZM12.5002%207.5V9.375C12.5002%209.54076%2012.5661%209.69973%2012.6833%209.81694C12.8005%209.93415%2012.9595%2010%2013.1252%2010C13.291%2010%2013.45%209.93415%2013.5672%209.81694C13.6844%209.69973%2013.7502%209.54076%2013.7502%209.375V7.5H15.799C15.9486%207.50015%2016.0932%207.55397%2016.2065%207.65168C16.3198%207.7494%2016.3943%207.88452%2016.4165%208.0325L17.7015%2016.5963C17.7416%2016.863%2017.7237%2017.1353%2017.6489%2017.3945C17.5742%2017.6537%2017.4444%2017.8937%2017.2684%2018.0982C17.0924%2018.3026%2016.8744%2018.4667%2016.6292%2018.5792C16.3841%2018.6917%2016.1175%2018.7499%2015.8477%2018.75H4.15273C3.88298%2018.7499%203.61641%2018.6917%203.37123%2018.5792C3.12605%2018.4667%202.90802%2018.3026%202.73205%2018.0982C2.55607%2017.8937%202.42629%2017.6537%202.35155%2017.3945C2.27681%2017.1353%202.25888%2016.863%202.29898%2016.5963L3.58399%208.0325C3.6061%207.88473%203.68041%207.74978%203.79347%207.65209C3.90652%207.5544%204.05082%207.50045%204.20023%207.5H6.25023V9.375C6.25023%209.54076%206.31608%209.69973%206.43329%209.81694C6.5505%209.93415%206.70947%2010%206.87523%2010C7.041%2010%207.19997%209.93415%207.31718%209.81694C7.43439%209.69973%207.50023%209.54076%207.50023%209.375V7.5H12.5002Z'%20fill='white'/%3e%3c/svg%3e" alt="">門市預約試穿</button>
+                  </div>
             </div>
 
-            <!-- 商品區 -->
-            <div class="products">
-                <!-- 商品卡排列 -->
-                <div class="product-grid">
-                    <!-- 商品卡 -->
-                    <a href="products-details.html" class="product-card">
-    <img src="/web-layout-training-vite/assets/Product-Card-BYZYi8Gj.png" alt="PLATFORM 404">
-    <div class="card-info">
-        <h6>PLATFORM 404</h6>
-        <p class="label-md">NT$1,290</p>
+            <!-- 產品說明 -->
+            <div class="accordion">
+                <div class="accordion-item">
+                    <p class="label-md">商品材質</p>
+                    <p class="paragraph-md">鞋面：合成皮革（Synthetic Leather）<br>內裡：透氣網布材質，提升舒適與排汗性<br>鞋底：EVA 輕量發泡橡膠，具備良好緩震與止滑效果<br>鞋帶：聚酯纖維，耐拉扯不易鬆脫</p>
+                </div>
+                <hr>
+                <div class="accordion-item">
+                    <p class="label-md">購買須知</p>
+                    <p class="paragraph-md">商品顏色因螢幕顯示可能略有差異，請以實品為準。<br>建議首次穿著前試穿確認尺寸，避免影響退換貨權益。<br>本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。</p>
+                </div>
+                <hr>
+                <div class="accordion-item">
+                    <p class="label-md">保養方式</p>
+                    <p class="paragraph-md">建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。<br>收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。<br>若需深層清潔，建議使用中性清潔劑並搭配柔刷輕刷，勿使用漂白水或強酸強鹼清潔劑。</p>
+                </div>
+                <hr>
+            </div>
+         </div>
+
     </div>
-</a>                    <a href="#" class="product-card">
-    <img src="/web-layout-training-vite/assets/Product-Card-1-Dn442d00.png" alt="PLATFORM 404">
-    <div class="card-info">
-        <h6>PLATFORM 404</h6>
-        <p class="label-md">NT$1,290</p>
-    </div>
-</a>                    <a href="#" class="product-card">
+
+    <!-- 猜你喜歡 -->
+    <div class="best-seller container">
+        <h4>你可能也喜歡...</h4>
+        <div class="card-wrapper">
+            <!-- 商品卡 -->
+            <a href="products-details.html" class="product-card">
     <img src="/web-layout-training-vite/assets/Product-Card-2-DrOhMuCQ.png" alt="VM001">
     <div class="card-info">
-        <h6>PVM001</h6>
+        <h6>VM001</h6>
         <p class="label-md">NT$2,600</p>
     </div>
-</a>                    <a href="#" class="product-card">
+</a>            <a href="products-details.html" class="product-card">
     <img src="/web-layout-training-vite/assets/Product-Card-3-UrDUdSNt.png" alt="Melty Kiss">
     <div class="card-info">
         <h6>Melty Kiss</h6>
-        <p class="label-md">NT$4,00</p>
+        <p class="label-md">NT$4,000</p>
     </div>
-</a>                    <a href="#" class="product-card">
+</a>            <a href="products-details.html" class="product-card">
     <img src="/web-layout-training-vite/assets/Product-Card-4-DLYLxe8G.png" alt="BOOMBLOK">
     <div class="card-info">
         <h6>BOOMBLOK</h6>
-        <p class="label-md">NT$2,600</p>
+        <p class="label-md">NT$3,200</p>
     </div>
-</a>                    <a href="#" class="product-card">
-    <img src="/web-layout-training-vite/assets/Product-Card-5-SsUA5W6w.png" alt="BOOMBLOK4">
-    <div class="card-info">
-        <h6>BOOMBLOK</h6>
-        <p class="label-md">NT$2,600</p>
-    </div>
-</a>                    <a href="#" class="product-card">
-    <img src="/web-layout-training-vite/assets/Product-Card-6-DmBjYTqb.png" alt="R:UNER">
-    <div class="card-info">
-        <h6>R:UNER</h6>
-        <p class="label-md">NT$4,000</p>
-    </div>
-</a>                    <a href="#" class="product-card">
+</a>            <a href="products-details.html" class="product-card">
     <img src="/web-layout-training-vite/assets/Product-Card-7-NZFqZaj1.png" alt="Sugar Snap">
     <div class="card-info">
         <h6>Sugar Snap</h6>
-        <p class="label-md">NT$4,000</p>
+        <p class="label-md">NT$3,200</p>
     </div>
-</a>                    <a href="#" class="product-card">
-    <img src="/web-layout-training-vite/assets/Product-Card-8-CqBNebTY.png" alt="Neofoam">
-    <div class="card-info">
-        <h6>Neofoam</h6>
-        <p class="label-md">NT$4,000</p>
-    </div>
-</a>                </div>
-                <!-- 頁碼 -->
-                <div class="pagination">
-                    <button class="page-btn page-btn-arrow" disabled>
-                        <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.1925%202.05764C14.2507%202.1157%2014.2969%202.18467%2014.3284%202.2606C14.3599%202.33653%2014.3761%202.41793%2014.3761%202.50014C14.3761%202.58235%2014.3599%202.66375%2014.3284%202.73968C14.2969%202.81561%2014.2507%202.88458%2014.1925%202.94264L7.13377%2010.0001L14.1925%2017.0576C14.3099%2017.175%2014.3758%2017.3342%2014.3758%2017.5001C14.3758%2017.6661%2014.3099%2017.8253%2014.1925%2017.9426C14.0752%2018.06%2013.916%2018.1259%2013.75%2018.1259C13.584%2018.1259%2013.4249%2018.06%2013.3075%2017.9426L5.80752%2010.4426C5.74931%2010.3846%205.70314%2010.3156%205.67163%2010.2397C5.64012%2010.1638%205.6239%2010.0824%205.6239%2010.0001C5.6239%209.91793%205.64012%209.83653%205.67163%209.7606C5.70314%209.68467%205.74931%209.6157%205.80752%209.55764L13.3075%202.05764C13.3656%201.99944%2013.4345%201.95326%2013.5105%201.92175C13.5864%201.89024%2013.6678%201.87402%2013.75%201.87402C13.8322%201.87402%2013.9136%201.89024%2013.9896%201.92175C14.0655%201.95326%2014.1345%201.99944%2014.1925%202.05764Z'%20fill='%23212529'/%3e%3c/svg%3e" alt="上一頁">
-                    </button>
-                    <button class="page-btn active label-md">1</button>
-                    <button class="page-btn paragraph-md">2</button>
-                    <button class="page-btn paragraph-md">3</button>
-                    <span class="page-dots paragraph-md">...</span>
-                    <button class="page-btn paragraph-md">10</button>
-                    <button class="page-btn page-btn-arrow">
-                        <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5.80752%202.05764C5.86558%201.99944%205.93454%201.95326%206.01048%201.92175C6.08641%201.89024%206.16781%201.87402%206.25002%201.87402C6.33223%201.87402%206.41363%201.89024%206.48956%201.92175C6.56549%201.95326%206.63446%201.99944%206.69252%202.05764L14.1925%209.55764C14.2507%209.6157%2014.2969%209.68467%2014.3284%209.7606C14.3599%209.83653%2014.3761%209.91793%2014.3761%2010.0001C14.3761%2010.0824%2014.3599%2010.1638%2014.3284%2010.2397C14.2969%2010.3156%2014.2507%2010.3846%2014.1925%2010.4426L6.69252%2017.9426C6.57516%2018.06%206.41599%2018.1259%206.25002%2018.1259C6.08405%2018.1259%205.92488%2018.06%205.80752%2017.9426C5.69016%2017.8253%205.62423%2017.6661%205.62423%2017.5001C5.62423%2017.3342%205.69016%2017.175%205.80752%2017.0576L12.8663%2010.0001L5.80752%202.94264C5.74931%202.88458%205.70314%202.81561%205.67163%202.73968C5.64012%202.66375%205.6239%202.58235%205.6239%202.50014C5.6239%202.41793%205.64012%202.33653%205.67163%202.2606C5.70314%202.18467%205.74931%202.1157%205.80752%202.05764Z'%20fill='%23212529'/%3e%3c/svg%3e" alt="下一頁">
-                    </button>
-                </div>
-            </div>
-        </div>
+</a>        </div>
     </div>
 
     <!-- banner 區塊 -->
@@ -135,7 +164,7 @@
         <button class="btn btn-neutral-filled">馬上註冊</button>
     </div>
 </div>
-    <!-- 頁腳 -->
+     <!-- 頁腳 -->
     <footer class="footer">
     <div class="footer-inner container">
         <img src="data:image/png;base64,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" alt="logo">
