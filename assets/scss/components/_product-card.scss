@@ -1,0 +1,17 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+    color: var(--text-primary);
+}
+.product-card:hover .card-info{
+    color: var(--text-highlight);
+}
+.product-card:hover img{
+    opacity: 80%;
+}

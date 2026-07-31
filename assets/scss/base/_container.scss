@@ -1,0 +1,8 @@
+.container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: var(--spacing-l);
+}
+.container-narrow{
+  max-width: 856px;   /* 特殊頁面寬度 */
+}

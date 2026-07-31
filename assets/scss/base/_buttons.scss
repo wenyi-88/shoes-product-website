@@ -1,0 +1,58 @@
+/* 按鈕樣式 */
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs); 
+  padding: var(--spacing-s) var(--spacing-l);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-label-md);
+  cursor: pointer; /*滑鼠移到這個按鈕上時,游標會變成手指形狀*/
+  transition: all 0.2s ease; /*過渡動畫*/
+  border: none; 
+}
+
+.btn img{
+  width: 20px;
+  height: 20px;
+}
+
+.btn-primary{
+  background-color: var(--color-primary-300);
+  color: var(--text-primary);
+}
+.btn-primary:hover, .btn-primary:focus{
+  color: var(--color-primary-500);
+}
+.btn-primary:focus{
+  box-shadow: 0 0 0 3px rgba(192, 250, 115, 0.4);
+}
+
+.btn-neutral-filled{
+  background-color: var(--color-neutral-900);
+  color: var(--text-on-dark);
+}
+.btn-neutral-filled:hover, .btn-neutral-filled:focus{
+  background-color: var(--color-neutral-700);
+}
+.btn-neutral-filled:focus{
+  box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+.btn-neutral-outlined{
+  border: 1px solid var(--color-neutral-900);
+  background-color:var(--color-neutral-0);
+  color: var(--text-primary);
+}
+.btn-neutral-outlined:hover, .btn-neutral-outlined:focus{
+  background-color: var(--color-neutral-900);
+  color: var(--text-on-dark);
+}
+.btn-neutral-outlined:focus{
+  box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+.btn:disabled{
+  opacity: 0.4;
+  cursor: not-allowed;
+}

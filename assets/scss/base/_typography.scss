@@ -1,0 +1,79 @@
+:root{
+    /* Typography*/
+    --font-size-display-1: 64px;
+    --font-size-display-2: 48px;
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-h4: 24px;
+    --font-size-h5: 20px;
+    --font-size-h6: 16px;
+    --font-size-label-lg: 20px;
+    --font-size-label-md: 16px;
+    --font-size-label-sm: 14px;
+    --font-size-label-xs: 12px;
+    --font-size-paragraph-lg: 20px;
+    --font-size-paragraph-md: 16px;
+    --font-size-paragraph-sm: 14px;
+    --font-size-paragraph-xs: 12px;
+}
+
+/* h文字樣式 */
+h1{
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+h2{
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+h3{
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+h4{
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+h5{
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+h6{
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+
+/* label文字樣式 */
+.label-lg, .label-md, .label-sm, .label-xs{
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 500;
+}
+.label-lg{ font-size: var(--font-size-label-lg); }
+.label-md{ font-size: var(--font-size-label-md); }
+.label-sm{ font-size: var(--font-size-label-sm); }
+.label-xs{ font-size: var(--font-size-label-xs); }
+
+/* Paragraph文字樣式 */
+.paragraph-lg, .paragraph-md, .paragraph-sm, .paragraph-xs{
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 400;
+}
+.paragraph-lg{ font-size: var(--font-size-paragraph-lg); }
+.paragraph-md{ font-size: var(--font-size-paragraph-md); }
+.paragraph-sm{ font-size: var(--font-size-paragraph-sm); }
+.paragraph-xs{ font-size: var(--font-size-paragraph-xs); }

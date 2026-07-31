@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 標籤基本樣式 */
+body{
+    font-family: 'Noto Sans TC', serif;
+}
+img {
+  max-width: 100%;
+	vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: var(--color-neutral-900);
+}
+.nav a, .footer-inner a, .menu a{
+  display: block;
+  padding: var(--spacing-s) 0;
+}

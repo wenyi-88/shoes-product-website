@@ -1,0 +1,44 @@
+.option{
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-s) var(--spacing-l);
+  background-color: var(--color-neutral-0);
+  color: var(--text-primary);
+  font-size: var(--font-size-label-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.option:hover{
+  border-color: var(--color-neutral-900);
+}
+.option.selected{
+  border: 1px solid var(--color-neutral-900);
+}
+.option:disabled{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.option--img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none; 
+  padding: 0;
+  color: var(--text-secondary);
+  background-color: transparent;  /* 覆蓋掉背景色 */
+  gap: var(--spacing-xxs);
+}
+.option--img img{
+  width: 64px; 
+  height: 64px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;   /* 預留邊框的空間,預設透明 */
+}
+.option--img:hover img{
+  opacity: 80%;
+}
+.option--img.selected img{
+  border-color: var(--color-neutral-900);   /* 選中時,邊框變黑色 */
+}

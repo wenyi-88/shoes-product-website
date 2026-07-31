@@ -1,5 +1,21 @@
-@import './layout/header.scss';
-@import './layout/footer.scss';
+// base
+@import './base/variables';
+@import './base/typography';
+@import './base/container';
+@import './base/buttons';
+@import './base/option';
+@import './base/reset';
 
+// components
+@import './components/breadcrumb';
+@import './components/banner';
+@import './components/product-card';
 
-@import './pages/index.scss';
+// layout
+@import './layout/nav';
+@import './layout/footer';
+
+// pages
+@import './pages/index';
+@import './pages/story';
+@import './pages/products-details';

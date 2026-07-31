@@ -1,0 +1,26 @@
+.nav{
+    width: 100%;
+    background-color: var(--color-neutral-0);
+}
+.nav-inner, .footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-inner{
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m)
+}
+.nav ul, .footer-inner ul{
+    display: flex;
+    align-items: center;
+    list-style: none;   /* 移除項目符號 */
+    gap: var(--spacing-3xl);
+}
+.nav ul img, .footer-inner img{
+    width: 129px;
+    height: 46px;
+}
+.nav a:hover, .footer a:hover{
+    color: var(--color-primary-500);
+}

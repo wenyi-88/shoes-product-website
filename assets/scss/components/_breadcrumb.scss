@@ -1,0 +1,21 @@
+.breadcrumb{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+/* 「相鄰兄弟選擇器」語法,中間的 + 意思是:除了第一個<li>之外,從第二個開始,每一個<li>都符合這個條件 */
+.breadcrumb-item + .breadcrumb-item::before{
+  content: "/";
+  padding: 0 var(--spacing-s);
+  color: var(--color-neutral-300);
+}
+.breadcrumb-item a{
+  color: var(--color-neutral-600);   /* 可以點擊的連結 */
+}
+.breadcrumb-item a:hover{
+  color: var(--text-primary);
+  text-decoration: underline;   /* 可以點擊的連結,滑鼠移過去給個提示 */
+}
+.breadcrumb-item.active{   /* 同時擁有這兩個class的元素 */
+  color: var(--text-primary);   /* 目前頁面 */
+}

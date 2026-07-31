@@ -1,0 +1,126 @@
+/* ====以下開始是品牌故事主內容==== */
+
+/* 通用 */
+hr{
+    border: 1px solid var(--color-neutral-300);
+}
+
+/* 英雄大圖 */
+.hero{
+    width: 100%;
+    height: 400px;
+    background-image: url("../images/story-page/Hero Section.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    text-align: center;
+    color: var(--color-neutral-0);
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+/* 文字介紹 */
+.blockquote{
+    text-align: center;
+    padding: var(--spacing-xl);
+    margin-top: var(--spacing-5xl);
+    background-color: var(--color-primary-100);
+}
+.blockquote h4{
+    margin-bottom: var(--spacing-s);
+    color: var(--color-primary-400);
+}
+.blockquote p{
+    color: var(--color-neutral-900);
+}
+
+/* 主介紹圖 */
+.main-img{
+    max-width:1076px;
+    height:717px;
+    margin: 0 auto;
+    margin-top: var(--spacing-3xl);
+}
+.main-img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 主內容區 */
+.story-main{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+    padding: var(--spacing-m) 0px;
+}
+
+/* 品牌簡介 */
+.brand-intro h4{
+    margin-bottom: var(--spacing-m);
+}
+.brand-intro h5{
+    color: var(--color-primary-400);
+    margin-bottom: var(--spacing-s);
+}
+.brand-intro p{
+    margin-bottom: var(--spacing-s);
+}
+.brand-intro p:last-of-type{  /*在同類型標籤裡的最後一個*/
+    margin-bottom: 0px;
+}
+
+/* 品牌歷程 */
+.brand-history h4{
+    margin-bottom: var(--spacing-m);
+}
+.brand-history ol {
+  list-style: none;
+}
+.brand-history li{
+    margin-bottom: 12px;
+}
+.brand-history li::before {
+  content: "•";
+  font-size: 16px;
+  margin-right: 8px;
+  color: var(--text-primary);
+}
+
+/* 品牌理念 */
+.brand-concept h4{
+    margin-bottom: var(--spacing-m);
+}
+.brand-concept ul {
+  list-style: none;
+}
+.brand-concept li{
+    border-left: 3px solid var(--color-neutral-300);
+  padding-left: var(--spacing-s);
+  margin-bottom: var(--spacing-s);
+}
+
+/* 品牌故事 */
+.brand-story{
+    margin-bottom: var(--spacing-3xl);
+}
+.brand-story h4{
+    margin-bottom: var(--spacing-m);
+}
+.brand-story ul {
+  list-style: none;
+  padding-left: 0;
+}
+.brand-story li{
+    margin-bottom: var(--spacing-s);
+}
+.brand-story a{
+    color: var(--color-primary-400);
+    text-decoration: underline;
+}
