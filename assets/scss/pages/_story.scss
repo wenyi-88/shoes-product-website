@@ -25,6 +25,18 @@ hr{
     left: 50%; 
     transform: translate(-50%, -50%);
 }
+@media (max-width: $bp-tablet) {
+    .hero{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/story-page/Hero Section-sm.png");
+        background-size: cover;
+    }
+  .hero-text h1{
+    font-size: var(--font-size-h3);
+  }
+  .hero-text h3{
+    font-size: var(--font-size-h5);
+  }
+}
 
 /* 文字介紹 */
 .blockquote{
@@ -33,24 +45,38 @@ hr{
     margin-top: var(--spacing-5xl);
     background-color: var(--color-primary-100);
 }
-.blockquote h4{
+.blockquote h5{
     margin-bottom: var(--spacing-s);
     color: var(--color-primary-400);
 }
 .blockquote p{
     color: var(--color-neutral-900);
 }
+@media (max-width: $bp-tablet) {
+    .blockquote{
+        margin-top: var(--spacing-xl);
+        text-align: left;
+    }
+    .blockquote h5{
+        font-size: var(--font-size-h6);
+    }
+}
+
 
 /* 主介紹圖 */
 .main-img{
     max-width:1076px;
-    height:717px;
     margin: 0 auto;
     margin-top: var(--spacing-3xl);
 }
 .main-img img{
     width: 100%;
-    height: 100%;
+    height: auto;
+}
+@media (max-width: $bp-tablet) {
+    .main-img{
+        margin-top: var(--spacing-xl);
+    }
 }
 
 /* 主內容區 */
@@ -58,7 +84,12 @@ hr{
     display: flex;
     flex-direction: column;
     gap: var(--spacing-3xl);
-    padding: var(--spacing-m) 0px;
+    padding: var(--spacing-m);
+}
+@media (max-width: $bp-tablet) {
+    .story-main{
+        gap: var(--spacing-xl);
+    }
 }
 
 /* 品牌簡介 */

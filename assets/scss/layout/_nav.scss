@@ -24,3 +24,19 @@
 .nav a:hover, .footer a:hover{
     color: var(--color-primary-500);
 }
+.nav a.nav-logo, .nav a.nav-member{
+    padding: 0;
+}
+
+@media (max-width:$bp-tablet) {
+    .nav-inner{
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-s)
+    }
+}
+
+@media (max-width: $bp-mobile) {
+  .nav-link{
+    display: none;
+  }
+}
