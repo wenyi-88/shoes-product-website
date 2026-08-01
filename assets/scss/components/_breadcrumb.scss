@@ -19,3 +19,9 @@
 .breadcrumb-item.active{   /* 同時擁有這兩個class的元素 */
   color: var(--text-primary);   /* 目前頁面 */
 }
+
+@media (max-width: $bp-mobile) {
+  .breadcrumb .label-md{
+    font-size: var(--font-size-label-sm);
+  }
+}
