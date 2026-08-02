@@ -2,7 +2,8 @@
 .product-details-main{
     display: grid;
     grid-template-columns: 746fr 526fr;
-    padding: var(--spacing-5xl) var(--spacing-l);
+    margin-top: var(--spacing-5xl);
+    margin-bottom: var(--spacing-5xl);
     gap: var(--spacing-l);
 }
 
@@ -27,6 +28,26 @@
     gap: var(--spacing-xl);
 }
 
+@media (max-width: $bp-tablet) {
+  .product-details-main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .product-info{
+    padding-left: var(--spacing-m);
+    padding-right: var(--spacing-m);
+  }
+  .product-images-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .product-images-grid img:not(:first-child){
+    display: none;
+  }
+}
+
 /* 文字價格與介紹 */
 /* 麵包屑 */
 .breadcrumb{
@@ -35,6 +56,16 @@
 .product-intro h2{
   margin-bottom: var(--spacing-m)
 }
+@media (max-width: $bp-tablet) {
+  .breadcrumb{
+  margin-bottom: var(--spacing-xs);
+  }
+  .product-intro h2{
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-s);
+  }
+}
+
 /* 價格 */
 .price{
   display: flex;
@@ -50,10 +81,18 @@
   text-decoration: line-through;
 }
 .product-intro p{
-  margin-bottom: var(--spacing-s);   /* 12px */
+  margin-bottom: var(--spacing-s);
 }
 .product-intro p:last-of-type{
   margin-bottom: 0; 
+}
+@media (max-width:$bp-tablet) {
+  .price{
+    margin-bottom: var(--spacing-s);
+    h5{
+      font-size: var(--font-size-h6);
+    }
+  }
 }
 
 /* 顏色尺寸與按鈕 */
@@ -88,10 +127,39 @@
 .btn-wrapper .btn{
   flex: 1;
 }
+.btn-heart-mobile{
+  display: none;
+}
 .btn-neutral-outlined:hover img, .btn-neutral-outlined:focus img{
   filter: invert(1); /*顏色反過來*/
 }
-
+@media (max-width:$bp-tablet) {
+  .option-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-cta > .btn-wrapper{
+    margin-top: var(--spacing-l);
+  }
+  .btn-neutral-outlined{
+    display: none;   //「加入收藏」文字按鈕，手機版藏起來
+  }
+  .btn-heart-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    order: 1;   // 排到右邊
+  }
+  .btn-heart-mobile img{
+    width: 20px;
+    height: 20px;
+  }
+}
 
 /* 產品說明 */
 .accordion-item{
@@ -109,7 +177,8 @@
 
 /* 猜你喜歡 */
 .best-seller{
-  padding: var(--spacing-3xl) 0;
+  margin-top: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
 }
 .best-seller h4{
   margin-bottom: var(--spacing-m);
@@ -118,4 +187,16 @@
   display: flex;
   gap: var(--spacing-l);
 }
-
+@media (max-width: $bp-tablet) {
+  .card-wrapper{
+    gap: var(--spacing-m);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    scrollbar-width: none; //不要卷軸
+  }
+  .card-wrapper .product-card{
+    flex: 0 0 90%;      // 每張卡固定佔螢幕寬度的 80%，露出下一張的邊緣
+    scroll-snap-align: start;
+  }
+}

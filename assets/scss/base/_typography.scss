@@ -18,6 +18,19 @@
     --font-size-paragraph-xs: 12px;
 }
 
+.display-1{
+  font-size: var(--font-size-display-1);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+.display-2{
+  font-size: var(--font-size-display-2);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-default);
+  font-weight: 700;
+}
+
 /* h文字樣式 */
 h1{
   font-size: var(--font-size-h1);
