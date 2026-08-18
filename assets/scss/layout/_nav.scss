@@ -35,8 +35,30 @@
     }
 }
 
+.nav-mobile-links{
+    display: none;
+}
+
 @media (max-width: $bp-mobile) {
   .nav-link{
     display: none;
+  }
+
+  .nav-mobile-links{
+    display: flex;
+  }
+
+  .nav-mobile-link{
+    flex: 1;
+    text-align: center;
+    padding: var(--spacing-s) 0;
+  }
+
+  .nav-mobile-link--primary{
+    background-color: var(--color-primary-200);
+  }
+
+  .nav-mobile-link--secondary{
+    background-color: var(--color-primary-100);
   }
 }
