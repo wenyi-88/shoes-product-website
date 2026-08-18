@@ -182,11 +182,11 @@
 
         .star{
         position: absolute;
-        left: calc(50% - 180px); //位置距離中心點 397px(文字的一半+間距+本身尺寸)
+        left: calc(50% - 180px);
         }
         .sparkle{
         position: absolute;
-        right: calc(50% - 210px); //位置距離中心點 357px(文字的一半+圖片超出文字的範圍)
+        right: calc(50% - 210px);
         }
 
         }

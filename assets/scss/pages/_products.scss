@@ -1,0 +1,112 @@
+/* ====以下開始是商品列表主內容==== */
+.index-main{
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--spacing-xl);
+    padding-bottom: 80px;
+    gap: var(--spacing-l);
+}
+
+@media (max-width: $bp-mobile) {
+    h3{
+        font-size: var(--font-size-h4);
+    }
+}
+
+/* 菜單與商品區 */
+.product-section{
+    display: flex;
+    gap: var(--spacing-l);
+}
+
+/* 菜單 */
+.menu{
+    width: 196px;
+    flex-shrink: 0;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    list-style: none;
+}
+.menu ul li a{
+  color: var(--text-primary);
+}
+.menu ul li a:hover{
+  color: var(--text-highlight);
+}
+.menu ul li.active a{
+  color: var(--text-highlight);
+}
+@media (max-width: $bp-tablet) {
+    .product-section{
+        flex-direction: column;
+    }
+  .menu{
+    display: none;
+  }
+}
+
+/* 商品區 */
+.products{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+    width: 100%;
+}
+
+/* 商品卡排列 */
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-3xl) var(--spacing-l);
+}
+
+// 第10張卡桌面版預設隱藏
+.card-mobile-only{
+  display: none;
+}
+
+@media (max-width: $bp-tablet) {
+    .products{
+        gap: var(--spacing-xl);
+    }
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-l) var(--spacing-s);
+    }
+    .card-mobile-only{
+    display: flex;   // 手機版顯示用flex 
+    }
+}
+
+/* 頁碼 */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-s);
+}
+.page-btn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--color-neutral-0);
+    color: var(--text-primary);
+}
+.page-btn-arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-btn:hover{
+    background-color: var(--color-primary-300);
+}
+.page-btn.active{
+    background-color: var(--color-primary-300);
+}
+.page-btn:disabled{
+    opacity: 0.4;
+    background-color: transparent;
+}

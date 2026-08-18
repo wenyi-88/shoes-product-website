@@ -1,73 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./layout/head', { title: '商品列表' }); -%>
+    <%- include('./layout/head', { title: '首頁' }); -%>
 </head>
 <body>
 
     <!-- 導覽列 -->
     <%- include('./layout/nav'); -%>
 
-     <!-- 主內容區 -->
-    <div class="main index-main container">
+    <!-- 英雄大圖 -->
+    <section class="hero">
+        <div class="hero-text">
+            <div class="display-1">URBNSTEP</div>
+            <h3>Your Step, Your Statement</h3>
+            <button class="btn btn-primary">立即選購</button>
+        </div>
+    </section>
 
-        <!-- 麵包屑 -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item label-md"><a href="#">首頁</a></li>
-                <li class="breadcrumb-item active label-md" aria-current="page">所有商品</li>
-            </ol>
-        </nav>
-        
-        <h3>女鞋</h3>
+    <!-- 最新到貨 -->
+     <section class="new-arrival container">
+        <div class="display-2">New Arrival</div>
+        <h3>新品上市</h3>
+        <div class="new-product-grid">
+            <!-- 商品卡 -->
+            <%- include('./layout/product-card', { href: '#', image: '../assets/images/home-page/Product-Card.png', alt: 'Monoverse', name: 'Monoverse', price: '3,600', extraClass: '' }); -%>
+            <%- include('./layout/product-card', { href: '#', image: '../assets/images/home-page/Product-Card-1.png', alt: 'PLATFORM 404', name: 'PLATFORM 404', price: '2,690', extraClass: '' }); -%>
+            <%- include('./layout/product-card', { href: '#', image: '../assets/images/home-page/Product-Card-2.png', alt: 'URBN Force', name: 'URBN Force', price: '3,200', extraClass: '' }); -%>
+            <%- include('./layout/product-card', { href: '#', image: '../assets/images/home-page/Product-Card-3.png', alt: 'Mode90', name: 'Mode90', price: '4,000', extraClass: '' }); -%>
+        </div>
+     </section>
 
-        <!-- 菜單與商品區 -->
-        <div class="product-section">
+     <!-- 熱銷補貨 -->
+    <section class="best-seller container">
+        <h2>熱銷補貨</h2>
+        <div class="card-wrapper">
+            <a href="#" class="best-card">
+                <span class="label-sm">人氣 No.1</span>
+                <img src="../assets/images/card/Product-Card-3.png" alt="人氣 No.1">
+            </a>
+            <a href="#" class="best-card">
+                <span class="label-sm">人氣 No.1</span>
+                <img src="../assets/images/card/Product-Card.png" alt="人氣 No.1">
+            </a>
+            <a href="#" class="best-card">
+                <span class="label-sm">人氣 No.1</span>
+                <img src="../assets/images/card/Product-Card-6.png" alt="人氣 No.1">
+            </a>
+            <a href="#" class="best-card">
+                <span class="label-sm">人氣 No.1</span>
+                <img src="../assets/images/card/Product-Card-9.png" alt="人氣 No.1">
+            </a>
+        </div>
+    </section>
 
-            <!-- 菜單 -->
-            <div class="menu">
-                <ul>
-                    <li class="active"><a href="#" class="label-md">所有商品</a></li>
-                    <li><a href="#" class="label-md">慢跑鞋</a></li>
-                    <li><a href="#" class="label-md">滑板鞋</a></li>
-                    <li><a href="#" class="label-md">厚底鞋</a></li>
-                    <li><a href="#" class="label-md">限定 / 聯名企劃</a></li>
-                </ul>
-            </div>
-
-            <!-- 商品區 -->
-            <div class="products">
-                <!-- 商品卡排列 -->
-                <div class="product-grid">
-                    <!-- 商品卡 -->
-                    <%- include('./layout/product-card', { href: 'products-details.html', image: '../assets/images/card/Product-Card.png', alt: 'PLATFORM 404', name: 'PLATFORM 404', price: '1,290', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-1.png', alt: 'PLATFORM 404', name: 'PLATFORM 404', price: '1,290', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-2.png', alt: 'VM001', name: 'PVM001', price: '2,600', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-3.png', alt: 'Melty Kiss', name: 'Melty Kiss', price: '4,000', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-4.png', alt: 'BOOMBLOK', name: 'BOOMBLOK', price: '2,600', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-5.png', alt: 'BOOMBLOK4', name: 'BOOMBLOK', price: '2,600', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-6.png', alt: 'R:UNER', name: 'R:UNER', price: '4,000', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-7.png', alt: 'Sugar Snap', name: 'Sugar Snap', price: '4,000', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-8.png', alt: 'Neofoam', name: 'Neofoam', price: '4,000', extraClass: '' }); -%>
-                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-9.png', alt: 'Buttermood', name: 'Buttermood', price: '4,000', extraClass: 'card-mobile-only' }); -%>
+    <!-- 聯名banner -->
+    <section class="sale">
+        <div class="sale-content">
+            <img class="star" src="../assets/images/home-page/Star.png" alt="">
+            <img class="sparkle" src="../assets/images/home-page/Sparkle.png" alt="">
+            <div class="sale-text">
+                <div class="sale-title">
+                    <div class="display-2">URBNSTEP</div>
+                    <h1>x</h1>
+                    <div class="display-2">Kevin Chen</div>
                 </div>
-                <!-- 頁碼 -->
-                <div class="pagination">
-                    <button class="page-btn page-btn-arrow" disabled>
-                        <img src="../assets/icons/chevron-left.svg" alt="上一頁">
-                    </button>
-                    <button class="page-btn active label-md">1</button>
-                    <button class="page-btn paragraph-md">2</button>
-                    <button class="page-btn paragraph-md">3</button>
-                    <span class="page-dots paragraph-md">...</span>
-                    <button class="page-btn paragraph-md">10</button>
-                    <button class="page-btn page-btn-arrow">
-                        <img src="../assets/icons/chevron-right.svg" alt="下一頁">
-                    </button>
-                </div>
+                <h2>跨界聯名，限量發售</h2>
+                <p class="paragraph-lg">
+                    <span>新銳漫畫家 Kevin Chen 親自操刀設計</span><span>，</span><span>街頭能量全面引爆！</span>
+                </p>
+                <button class="btn btn-primary">立即搶購</button>
             </div>
         </div>
-    </div>
+    </section>
+
+     <!-- 依系列選購 -->
+    <section class="series container">
+        <h2>依系列選購</h2>
+        <div class="card-wrapper">
+            <a href="#" class="series-card">
+                <div class="series-text">
+                    <h3>URBN RUNNER</h3>
+                    <h4>慢跑系列</h4>
+                </div>
+                <img src="../assets/images/home-page/Type=URBN RUNNER.png" alt="">
+            </a>
+            <a href="#" class="series-card">
+                <div class="series-text">
+                    <h3>URBN RUNNER</h3>
+                    <h4>慢跑系列</h4>
+                </div>
+                <img src="../assets/images/home-page/Type=STREETMODE.png" alt="">
+            </a>
+            <a href="#" class="series-card">
+                <div class="series-text">
+                    <h3>URBN RUNNER</h3>
+                    <h4>慢跑系列</h4>
+                </div>
+                <img src="../assets/images/home-page/Type=CHUNK DISTRICT.png" alt="">
+            </a>
+            <a href="#" class="series-card">
+                <div class="series-text">
+                    <h3>URBN RUNNER</h3>
+                    <h4>慢跑系列</h4>
+                </div>
+                <img src="../assets/images/home-page/Type=COLLAB ZONE.png" alt="">
+            </a>
+        </div>
+    </section>
+
+    <!-- 穿搭靈感 -->
+    <section class="style container">
+        <h2>穿搭靈感</h2>
+        <div class="styling-grid">
+            <img src="../assets/images/home-page/img.png" alt="">              <!-- 1: 第1欄 第1排 -->
+            <img src="../assets/images/home-page/img-1.png" alt="">              <!-- 2: 第2欄 第1排 -->
+            <img src="../assets/images/home-page/img-2.png" alt="">              <!-- 3: 第3欄 第1排 -->
+            <img src="../assets/images/home-page/img-3.png" alt="">              <!-- 4: 第4欄 第1排 -->
+            <img src="../assets/images/home-page/img-10.png" class="big" alt="">  <!-- 5: 第5、6欄，跨第1~2排的大方塊 -->
+
+            <img src="../assets/images/home-page/img-11.png" class="big" alt="">  <!-- 6: 第1、2欄，跨第2~3排的大方塊 -->
+            <img src="../assets/images/home-page/img-4.png" alt="">              <!-- 7: 第3欄 第2排 -->
+            <img src="../assets/images/home-page/img-5.png" alt="">              <!-- 8: 第4欄 第2排 -->
+
+            <img src="../assets/images/home-page/img-6.png" alt="">              <!-- 9: 第3欄 第3排 -->
+            <img src="../assets/images/home-page/img-7.png" alt="">              <!-- 10: 第4欄 第3排 -->
+            <img src="../assets/images/home-page/img-8.png" alt="">              <!-- 11: 第5欄 第3排 -->
+            <img src="../assets/images/home-page/img-9.png" alt="">              <!-- 12: 第6欄 第3排 -->
+        </div>
+    </section>
 
     <!-- banner 區塊 -->
     <%- include('./layout/banner'); -%>

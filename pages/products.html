@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./layout/head', { title: '商品列表' }); -%>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <%- include('./layout/nav'); -%>
+
+     <!-- 主內容區 -->
+    <div class="main index-main container">
+
+        <!-- 麵包屑 -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item label-md"><a href="index.html">首頁</a></li>
+                <li class="breadcrumb-item active label-md" aria-current="page">所有商品</li>
+            </ol>
+        </nav>
+        
+        <h3>女鞋</h3>
+
+        <!-- 菜單與商品區 -->
+        <div class="product-section">
+
+            <!-- 菜單 -->
+            <div class="menu">
+                <ul>
+                    <li class="active"><a href="#" class="label-md">所有商品</a></li>
+                    <li><a href="#" class="label-md">慢跑鞋</a></li>
+                    <li><a href="#" class="label-md">滑板鞋</a></li>
+                    <li><a href="#" class="label-md">厚底鞋</a></li>
+                    <li><a href="#" class="label-md">限定 / 聯名企劃</a></li>
+                </ul>
+            </div>
+
+            <!-- 商品區 -->
+            <div class="products">
+                <!-- 商品卡排列 -->
+                <div class="product-grid">
+                    <!-- 商品卡 -->
+                    <%- include('./layout/product-card', { href: 'products-details.html', image: '../assets/images/card/Product-Card.png', alt: 'PLATFORM 404', name: 'PLATFORM 404', price: '1,290', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-1.png', alt: 'PLATFORM 404', name: 'PLATFORM 404', price: '1,290', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-2.png', alt: 'VM001', name: 'PVM001', price: '2,600', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-3.png', alt: 'Melty Kiss', name: 'Melty Kiss', price: '4,000', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-4.png', alt: 'BOOMBLOK', name: 'BOOMBLOK', price: '2,600', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-5.png', alt: 'BOOMBLOK4', name: 'BOOMBLOK', price: '2,600', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-6.png', alt: 'R:UNER', name: 'R:UNER', price: '4,000', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-7.png', alt: 'Sugar Snap', name: 'Sugar Snap', price: '4,000', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-8.png', alt: 'Neofoam', name: 'Neofoam', price: '4,000', extraClass: '' }); -%>
+                    <%- include('./layout/product-card', { href: '#', image: '../assets/images/card/Product-Card-9.png', alt: 'Buttermood', name: 'Buttermood', price: '4,000', extraClass: 'card-mobile-only' }); -%>
+                </div>
+                <!-- 頁碼 -->
+                <div class="pagination">
+                    <button class="page-btn page-btn-arrow" disabled>
+                        <img src="../assets/icons/chevron-left.svg" alt="上一頁">
+                    </button>
+                    <button class="page-btn active label-md">1</button>
+                    <button class="page-btn paragraph-md">2</button>
+                    <button class="page-btn paragraph-md">3</button>
+                    <span class="page-dots paragraph-md">...</span>
+                    <button class="page-btn paragraph-md">10</button>
+                    <button class="page-btn page-btn-arrow">
+                        <img src="../assets/icons/chevron-right.svg" alt="下一頁">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner 區塊 -->
+    <%- include('./layout/banner'); -%>
+
+    <!-- 頁腳 -->
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
