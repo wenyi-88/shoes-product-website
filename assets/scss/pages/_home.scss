@@ -13,10 +13,295 @@
 .hero-text{
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-m);
+    align-items: flex-start;
     color: var(--text-on-dark);
     position: absolute;
     top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    left: 200px;
+    transform: translateY(-50%);
+
+    .display-1{
+    margin-bottom: var(--spacing-m);
+    }
+
+    h3{
+    margin-bottom: var(--spacing-3xl);
+    }
 }
+@media (max-width: $bp-tablet) {
+    .hero{
+        height: 480px;
+        background-image: url("/assets/images/home-page/Banner-sm.png");
+    }
+  .hero-text{
+    left: var(--spacing-l);
+    
+    .display-1{
+        font-size: var(--font-size-display-2);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    h3{
+        font-size: var(--font-size-h5);
+        margin-bottom: var(--spacing-l);
+    }
+  }
+}
+
+//新品上市
+.new-arrival{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-5xl);
+    margin-bottom: var(--spacing-5xl);
+    gap: var(--spacing-s);
+}
+.new-product-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2xl) var(--spacing-l);
+}
+@media (max-width: $bp-tablet) {
+    .new-arrival{
+        margin-top: var(--spacing-2xl);
+        margin-bottom: var(--spacing-2xl);
+        gap: var(--spacing-xs);
+        .display-2{
+            font-size: var(--font-size-h2);
+        }
+        h3{
+            font-size: var(--font-size-h4);
+        }
+    }
+    .new-product-grid{
+        gap: var(--spacing-l) var(--spacing-s);
+    }
+}
+
+//熱銷補貨
+.best-seller{
+    margin-top: var(--spacing-5xl);
+    margin-bottom: var(--spacing-5xl);
+
+    h2{
+    margin-bottom: var(--spacing-m);
+    }
+}
+@media (max-width: $bp-tablet) {
+    .best-seller{
+        margin-top: var(--spacing-2xl);
+        margin-bottom: var(--spacing-2xl);
+        h2{
+            font-size: var(--font-size-h4);
+        }
+    }
+}
+.best-card{
+    position: relative;
+
+    .label-sm{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary-100);
+    color: var(--text-highlight);
+    padding: var(--spacing-xs) var(--spacing-s);
+    }
+}
+
+// 聯名banner
+.sale{
+    padding: var(--spacing-3xl) 0px;
+
+    .sale-content{
+    width: 100%;
+    aspect-ratio: 1920 / 486;
+    background-image: url("/assets/images/home-page/image 30.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .star{
+        position: absolute;
+        width: 48px;
+        top: 68px;
+        left: calc(50% - 397px); //位置距離中心點 397px(文字的一半+間距+本身尺寸)
+    }
+    .sparkle{
+        position: absolute;
+        width: 76px;
+        bottom: 132px;
+        right: calc(50% - 357px); //位置距離中心點 357px(文字的一半+圖片超出文字的範圍)
+    }
+
+    }
+
+    .sale-text{
+        text-align: center;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .sale-title{
+        display: flex;
+        margin-bottom: var(--spacing-m);
+        gap: var(--spacing-l);
+            .display-2{
+            color: var(--text-on-dark);
+            }
+            h1{
+            color: var(--color-primary-300);
+            }
+        }
+
+    h2{
+        color: var(--text-on-dark);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    p{
+        color: var(--text-muted);
+        margin-bottom: var(--spacing-3xl);
+    }
+
+    .btn{
+    display: inline-flex;
+    }
+    }
+}
+@media (max-width: $bp-tablet) {
+    .sale{
+        padding: var(--spacing-l) 0px;
+
+        .sale-content{
+        height: 450px;
+        background-image: url("/assets/images/home-page/image30-sm.png");
+
+        .star{
+        position: absolute;
+        left: calc(50% - 180px); //位置距離中心點 397px(文字的一半+間距+本身尺寸)
+        }
+        .sparkle{
+        position: absolute;
+        right: calc(50% - 210px); //位置距離中心點 357px(文字的一半+圖片超出文字的範圍)
+        }
+
+        }
+
+        
+        .sale-text{
+            .sale-title{
+                flex-direction: column;
+                margin-bottom: var(--spacing-m);
+                gap: var(--spacing-xs);
+                    .display-2{
+                        font-size: var(--font-size-h2);
+                    }
+                    h1{
+                        font-size: var(--font-size-h3);
+                    }
+            }
+
+            h2{
+                font-size: var(--font-size-h5);
+                margin-bottom: var(--spacing-l);
+            }
+
+            p{
+                font-size: var(--font-size-paragraph-md);
+                margin-bottom: var(--spacing-xl);
+            }
+        }
+    }
+    
+}
+
+//依系列選購
+.series{
+    margin-top: var(--spacing-5xl);
+    margin-bottom: var(--spacing-5xl);
+
+    h2{
+    margin-bottom: var(--spacing-m);
+    }
+
+    .series-card{
+        position: relative;
+    }
+
+    .series-text{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        color: var(--text-on-dark);
+        text-align: center;
+        background-color: rgba(black, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3{
+            margin-bottom: var(--spacing-xs);
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        .card-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-s);
+            overflow-x: visible;
+        }
+    }
+}
+
+//穿搭靈感
+.style{
+    margin-top: var(--spacing-5xl);
+    margin-bottom: var(--spacing-5xl);
+
+    h2{
+    margin-bottom: var(--spacing-m);
+    }
+
+    .styling-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 200px;
+    gap: var(--spacing-xs);
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .big{
+            grid-column: span 2;   // 跨 2 欄
+            grid-row: span 2;      // 跨 2 排
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        .styling-grid{
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
+            scrollbar-width: none;
+            gap: var(--spacing-s);
+        }
+        .styling-grid img{
+            flex: 0 0 80%; 
+            height: auto; 
+            scroll-snap-align: start;
+        }
+    }
+
+}
+

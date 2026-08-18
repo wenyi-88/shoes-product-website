@@ -26,14 +26,14 @@ hr{
     transform: translate(-50%, -50%);
 }
 @media (max-width: $bp-tablet) {
-    .hero{
+    .story-hero{
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/story-page/Hero Section-sm.png");
         background-size: cover;
     }
-  .hero-text h1{
+  .story-hero-text h1{
     font-size: var(--font-size-h3);
   }
-  .hero-text h3{
+  .story-hero-text h3{
     font-size: var(--font-size-h5);
   }
 }

@@ -183,20 +183,3 @@
 .best-seller h4{
   margin-bottom: var(--spacing-m);
 }
-.card-wrapper{
-  display: flex;
-  gap: var(--spacing-l);
-}
-@media (max-width: $bp-tablet) {
-  .card-wrapper{
-    gap: var(--spacing-m);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    flex-wrap: nowrap;
-    scrollbar-width: none; //不要卷軸
-  }
-  .card-wrapper .product-card{
-    flex: 0 0 90%;      // 每張卡固定佔螢幕寬度的 80%，露出下一張的邊緣
-    scroll-snap-align: start;
-  }
-}

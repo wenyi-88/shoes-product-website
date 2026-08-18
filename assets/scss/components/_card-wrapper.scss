@@ -1,0 +1,17 @@
+.card-wrapper{
+  display: flex;
+  gap: var(--spacing-l);
+}
+
+@media (max-width: $bp-tablet) {
+  .card-wrapper{
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .card-wrapper > *{
+    flex: 0 0 80%;  // 每張卡固定佔螢幕寬度的 80%，露出下一張的邊緣
+    scroll-snap-align: start;
+  }
+}
