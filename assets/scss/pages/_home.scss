@@ -17,7 +17,6 @@
     color: var(--text-on-dark);
     position: absolute;
     top: 50%; 
-    left: 0;
     left: 200px;
     transform: translateY(-50%);
 
@@ -34,7 +33,7 @@
         height: 480px;
         background-image: url("/assets/images/home-page/Banner-sm.png");
     }
-  .hero-text{
+    .hero-text{
     left: var(--spacing-l);
     
     .display-1{
@@ -46,7 +45,7 @@
         font-size: var(--font-size-h5);
         margin-bottom: var(--spacing-l);
     }
-  }
+    }
 }
 
 //新品上市
@@ -251,11 +250,27 @@
     }
 
     @media (max-width: $bp-tablet) {
+        margin-top: var(--spacing-2xl);
+        margin-bottom: var(--spacing-2xl);
+
+        h2{
+            font-size: var(--font-size-h4);
+        }
+
         .card-wrapper{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: var(--spacing-s);
             overflow-x: visible;
+        }
+
+        .series-text{
+            h3{
+                font-size: var(--font-size-h6);
+            }
+            h4{
+                font-size: var(--font-size-h6);
+            }
         }
     }
 }
@@ -266,7 +281,7 @@
     margin-bottom: var(--spacing-5xl);
 
     h2{
-    margin-bottom: var(--spacing-m);
+        margin-bottom: var(--spacing-m);
     }
 
     .styling-grid{
@@ -288,6 +303,13 @@
     }
 
     @media (max-width: $bp-tablet) {
+        margin-top: var(--spacing-2xl);
+        margin-bottom: var(--spacing-2xl);
+
+        h2{
+            font-size: var(--font-size-h4);
+        }
+
         .styling-grid{
             display: flex;
             overflow-x: auto;
@@ -297,8 +319,8 @@
             gap: var(--spacing-s);
         }
         .styling-grid img{
-            flex: 0 0 80%; 
-            height: auto; 
+            flex: 0 0 80%;
+            width: 300px;  
             scroll-snap-align: start;
         }
     }
